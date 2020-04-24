@@ -1,10 +1,9 @@
 PREF=2020-NaaktgeborenC-PolyProc
 
 clean:
-	rm ${PREF}.log
-	rm ${PREF}.aux
-	rm ${PREF}.blg
-	rm ${PREF}.bbl
+	for EXT in log aux blg bbl; do \
+		rm -vf ${PREF}.${EXT}; \
+	done
 
 ${PREF}.pdf: ${PREF}.tex bibfile.bib
 	pdflatex ${PREF}.tex
