@@ -2,4 +2,32 @@
 % 2020-NaaktgeborenC-PolyProc.tex - by C. Naaktgeboren
 % License: CC-BY-NC-ND 4.0 - https://creativecommons.org/licenses/by-nc-nd/4.0/
 %-----------------------------------------------------------------------------------------------
-
+\documentclass[10pt,a4paper]{article}
+%-----------------------------------------------------------------------------------------------
+\usepackage{authblk}
+\usepackage{pslatex}
+\usepackage{graphicx}
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script: $(date -u '+%Y-%m-%d %Hh%Mm%Ss UTC')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\renewcommand\Affilfont{\itshape\small}
+%-----------------------------------------------------------------------------------------------
+\title{On Polytropic Processes}
+\author[1]{C.~Naaktgeboren}
+\affil[1]{%
+    Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.\par
+    Grupo de Pesquisa em Ciências Térmicas.
+}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{cc/by-nc-nd.pdf}\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\maketitle
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
