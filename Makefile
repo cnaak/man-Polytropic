@@ -8,6 +8,11 @@ clean:
 wipe: clean
 	rm -vf cc/*pdf
 
+cc/%.pdf: cc/%.svg
+	inkscape \
+		--file=$< \
+		--export-pdf=$@
+
 ${PREF}.pdf: ${PREF}.tex bibfile.bib
 	pdflatex ${PREF}.tex
 	bibtex   ${PREF}
