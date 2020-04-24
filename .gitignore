@@ -4,6 +4,9 @@ stdRef
 # The cc directory
 cc
 
+# My info file
+*.info
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
