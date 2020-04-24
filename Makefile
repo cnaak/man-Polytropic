@@ -13,6 +13,11 @@ cc/%.pdf: cc/%.svg
 		--file=$< \
 		--export-pdf=$@
 
+fig/%.pdf: fig/%.svg
+	inkscape \
+		--file=$< \
+		--export-pdf=$@
+
 ${PREF}.pdf: ${PREF}.tex bibfile.bib
 	pdflatex ${PREF}.tex
 	bibtex   ${PREF}
