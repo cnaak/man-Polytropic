@@ -1,6 +1,9 @@
 # My standardized bib database
 stdRef
 
+# The cc directory
+cc
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
