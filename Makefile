@@ -19,8 +19,8 @@ fig/%.pdf: fig/%.svg
 		--export-pdf=$@
 
 ${PREF}.pdf: ${PREF}.tex bibfile.bib
-	pdflatex ${PREF}.tex
-	bibtex   ${PREF}
-	pdflatex ${PREF}.tex
-	pdflatex ${PREF}.tex
+	pdflatex --enable-write18 ${PREF}.tex
+	bibtex ${PREF}
+	pdflatex --enable-write18 ${PREF}.tex
+	pdflatex --enable-write18 ${PREF}.tex
 
