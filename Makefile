@@ -5,6 +5,9 @@ clean:
 		rm -vf ${PREF}.${EXT}; \
 	done
 
+wipe: clean
+	rm -vf cc/*pdf
+
 ${PREF}.pdf: ${PREF}.tex bibfile.bib
 	pdflatex ${PREF}.tex
 	bibtex   ${PREF}
