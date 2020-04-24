@@ -7,6 +7,9 @@ cc
 # My info file
 *.info
 
+# Selected PDFs temporarily held back
+2020-NaaktgeborenC-PolyProc.pdf
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
