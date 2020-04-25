@@ -8,6 +8,7 @@
 \usepackage{authblk}
 \usepackage{pslatex}
 \usepackage{graphicx}
+\usepackage[squaren,cdot]{SIunits}
 %-----------------------------------------------------------------------------------------------
 \makeatletter
 \immediate\write18{datelog > \jobname.info} % site script: $(date -u '+%Y-%m-%d %Hh%Mm%Ss UTC')
@@ -39,7 +40,12 @@
 %-----------------------------------------------------------------------------------------------
 \section{Introduction}
 
-    Work in progress~\cite{2013-CengelYA+BolesMA-AMGH}...
+    Many engineering equilibrium thermodynamics processes  are  taken  to  follow  a  polytropic
+    relationship of constant $Pv^n$, in which $P$ is the system pressure, in  \kilo\pascal,  $v$
+    is the system specific volume, in $\meter\cubed\!\per\kilogram$, and $n$ is a  dimensionless
+    polytropic  exponent~\cite{2013-CengelYA+BolesMA-AMGH};  which  means,  for  a  ``$1$--$2$''
+    process, with end states labeled as ``1'' and ``2'',  the  relation  $P_1v_1^n  =  P_2v_2^n$
+    holds true.
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
