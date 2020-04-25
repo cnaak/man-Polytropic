@@ -22,6 +22,7 @@ ${PREF}.pdf: ${PREF}.tex \
 		cc/by-nc-nd.pdf \
 		fig/idealDieselExample.pdf \
 		fig/nonExactPolytropic.pdf \
+		fig/approximations.pdf \
 		bibfile.bib
 	pdflatex --enable-write18 ${PREF}.tex
 	bibtex ${PREF}
