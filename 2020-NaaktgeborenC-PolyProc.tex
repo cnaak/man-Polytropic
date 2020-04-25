@@ -10,6 +10,10 @@
 \usepackage{graphicx}
 \usepackage[squaren,cdot]{SIunits}
 %-----------------------------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+%-----------------------------------------------------------------------------------------------
 \makeatletter
 \immediate\write18{datelog > \jobname.info} % site script: $(date -u '+%Y-%m-%d %Hh%Mm%Ss UTC')
 \makeatother
@@ -53,7 +57,7 @@
     is frequently said to find support in measurents, while no specific  theoretical  derivation
     is presented at the point of introduction.
 
-    On  the  other  hand,  other  texts~\cite{1986-JonesJB+HawkingsGA-Wiley,  2006-BejanA-Wiley,
+    On  the  other  hand,  other  texts~\cite{1986-JonesJB+HawkinsGA-Wiley,   2006-BejanA-Wiley,
     2015-KroosKA+PotterMC-Cengage} include derivations that lead to a polytropic process, or  at
     least to an isentropic version of it, in which the exponent $n$ has a fixed value.
 
@@ -92,13 +96,27 @@
     merged together into super-processes that also fit the definition of a process.
 
     In order  to  make  the  intended  distinction  between  proposed  ``exact''  and  ``local''
-    polytropic processes, additional constraints need to be made to the process end states.
+    polytropic processes, additional constraints need to be made to the process end states.  The
+    following defines a \emph{logical process}, which is a process with constrained end states:
 
-    Therefore, the extent of a process that is candidate for being deemed as an exact polytropic
-    one is such that \emph{the defining conditions of the process apply uniformly throughout the
-    entirety of the proceess}.
+    \begin{definition}[logical process]\label{def:logical.proc}
+        Define logical process as one in which its stated defining conditions, in terms  of  all
+        of the allowed interactions for the underlying system or control volume, apply uniformly
+        from but not earlier than its initial state until but not later than its end state.
+    \end{definition}
 
+    Therefore, for  a  system  admitting  only  heat  and  work  interactions---i.e.,  a  simple
+    compressible system---the \emph{stated  interactions  of  heat  and  work}  define  possible
+    logical processes.
 
+    \begin{example}\label{ex:ideal.Otto}
+        Consider, for example, a closed system performing  the  well-known  air-standard,  ideal
+        Otto power cycle with ``intake'' state (of lowest temperature and pressure)  labeled  as
+        ``1''. The logical process corresponding to the  ``isentropic  compression''  statement,
+        implying $W_{out} < 0$ and $Q_{in} = 0$, is the  compression  stroke,  or  the  ``1--2''
+        process; while the ``isochoric heating'' statement, implying $W_{out} = 0$ and $Q_{in} >
+        0$, to the ``2--3'' process.
+    \end{example}
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
