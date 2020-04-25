@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage[squaren,cdot]{SIunits}
 \usepackage{multicol}
+\usepackage{float}
 %-----------------------------------------------------------------------------------------------
 \setlength{\columnsep}{8mm}
 \setlength{\columnseprule}{0.4pt}
@@ -116,7 +117,7 @@
     interactions---either stated heat and work interactions, or system property  specifications,
     or combinations of the two, define possible logical processes.
 
-    \begin{example}\label{ex:ideal.Otto}
+    \begin{example}\label{ex:ideal.Diesel}
         The well-known air-standard ideal Diesel power cycle with ``intake''  state  (of  lowest
         temperature and pressure) labeled as ``1'' can be divided in different ways  using  only
         logical processes. One such division is: (i)~``isentropic compression'', (ii)~``isobaric
@@ -127,6 +128,14 @@
         ``2'') and ``3--1''  (through  ``4'')  processes,  respectively,  since  these  are  the
         farthermost end states that uniformly embrace the stated defining conditions.
     \end{example}
+
+    \begin{figure}[H] % Non-floating figures work inside multicolumns environment
+        \centering
+        \label{fig:cycle.Diesel}
+        \includegraphics[width=40mm]{fig/idealDieselExample.pdf}
+        \caption{Air-standard ideal Diesel cycle in  logarithmic  $P\times  v$  coordinates,  in
+            support for the Example~\ref{ex:ideal.Diesel}.}
+    \end{figure}
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
