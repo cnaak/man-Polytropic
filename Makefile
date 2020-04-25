@@ -20,6 +20,7 @@ fig/%.pdf: fig/%.svg
 
 ${PREF}.pdf: ${PREF}.tex \
 		cc/by-nc-nd.pdf \
+		fig/idealDieselExample.pdf \
 		bibfile.bib
 	pdflatex --enable-write18 ${PREF}.tex
 	bibtex ${PREF}
