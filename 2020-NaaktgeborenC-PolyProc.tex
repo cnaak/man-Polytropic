@@ -107,22 +107,25 @@
     following defines a \emph{logical process}, which is a process with constrained end states:
 
     \begin{definition}[logical process]\label{def:logical.proc}
-        Define logical process as one in which its stated defining conditions, in terms  of  all
+        Define logical process as one in which its stated defining conditions, that  define  all
         of the allowed interactions for the underlying system or control volume, apply uniformly
-        from but not earlier than its initial state until but not later than its end state.
+        from, but not earlier than, its initial state until, but not later than, its end state.
     \end{definition}
 
-    Therefore, for  a  system  admitting  only  heat  and  work  interactions---i.e.,  a  simple
-    compressible system---the \emph{stated  interactions  of  heat  and  work}  define  possible
-    logical processes.
+    Therefore,   for   a   simple   compressible   system---admitting   only   work   and   heat
+    interactions---either stated heat and work interactions, or system property  specifications,
+    or combinations of the two, define possible logical processes.
 
     \begin{example}\label{ex:ideal.Otto}
-        Consider, for example, a closed system performing  the  well-known  air-standard,  ideal
-        Otto power cycle with ``intake'' state (of lowest temperature and pressure)  labeled  as
-        ``1''. The logical process corresponding to the  ``isentropic  compression''  statement,
-        implying $W_{out} < 0$ and $Q_{in} = 0$, is the  compression  stroke,  or  the  ``1--2''
-        process; while the ``isochoric heating'' statement, implying $W_{out} = 0$ and $Q_{in} >
-        0$, to the ``2--3'' process.
+        The well-known air-standard ideal Diesel power cycle with ``intake''  state  (of  lowest
+        temperature and pressure) labeled as ``1'' can be divided in different ways  using  only
+        logical processes. One such division is: (i)~``isentropic compression'', (ii)~``isobaric
+        heating'',  (iii)~``isentropic  expansion'',  and  (iv)~``isochoric   cooling'',   which
+        correspond to the ``1--2'', ``2--3'', ``3--4'', and  ``4--1''  canonical  processes  for
+        this cycle,  respectively.  Other  possibilities  include:  (a)~``any  work  temperature
+        increase'', and (b)~``non-compression pressure decrease'',  for  the  ``1--3''  (through
+        ``2'') and ``3--1''  (through  ``4'')  processes,  respectively,  since  these  are  the
+        farthermost end states that uniformly embrace the stated defining conditions.
     \end{example}
 
 %-----------------------------------------------------------------------------------------------
