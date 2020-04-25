@@ -11,6 +11,7 @@
 \usepackage[squaren,cdot]{SIunits}
 \usepackage{multicol}
 \usepackage{float}
+\usepackage{amsthm}
 %-----------------------------------------------------------------------------------------------
 \setlength{\columnsep}{8mm}
 \setlength{\columnseprule}{0.4pt}
@@ -159,6 +160,36 @@
         \caption{Air-standard ideal Diesel cycle in  logarithmic  $P\times  v$  coordinates,  in
             support for the Example~\ref{ex:ideal.Diesel}.}
     \end{figure}
+
+    Now we're in a position to define \emph{exact polytropic process}:
+
+    \begin{definition}[exact polytropic process]\label{def:exact.poly.proc}
+        An exact polytropic process is a logical process for which there is a unique  polytropic
+        relation $Pv^n = \mbox{const.}$, with a unique, constant exponent $n$, that  holds  true
+        for all states in the process path; or an isochoric logical process.
+    \end{definition}
+
+    It is worth noting that isochoric processes are equivalent to polytropic processes  with  $n
+    \to \pm\infty$ between stated end states. Definition~\ref{def:exact.poly.proc} accounts  for
+    the isochoric process non-unique polytropic exponent by explicitly including it as  a  valid
+    exact polytropic process.
+
+    \begin{theorem}\label{cor:1}
+        Any logical process defined by  a  unique,  constant-polytropic  exponent  relation  and
+        non-identical end states---beyond which the defining polytropic relation no longer holds
+        true---is an exact polytropic process.
+    \end{theorem}
+
+    \begin{proof}
+        Such logical process definition statement fulfills the definition criteria for an  exact
+        polytropic process, and therefore, is by definition, an exact polytropic process.  Since
+        the definition prohibits  the  end  states  to  be  identical,  the  uniqueness  of  the
+        polytropic relation is guaranteed, for if end states ``1'' and ``2'' are identical, then
+        $P_1v_1^n = P_2v_2^n$ for any exponent $n$ since $P_1 = P_2$ and $v_1 = v_2$; otherwise,
+        only the defining $n$ would cause the relation to  hold  true  for  all  states  in  the
+        process path.
+    \end{proof}
+
 
 
 %-----------------------------------------------------------------------------------------------
