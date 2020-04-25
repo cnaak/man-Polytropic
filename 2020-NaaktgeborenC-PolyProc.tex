@@ -109,6 +109,8 @@
 %-----------------------------------------------------------------------------------------------
 \section{Exact and Local Polytropic Processes}
 
+    \subsection{Logical Processes}
+
     In equilibrium engineering thermodynamics, a \emph{process}---more properly  a  quasi-static
     or quasi-equilibrium process---is defined in terms of changes  from  a  certain  equilibrium
     state of a system to  another~\cite{2013-CengelYA+BolesMA-AMGH},  with  process  \emph{path}
@@ -161,6 +163,8 @@
             support for the Example~\ref{ex:ideal.Diesel}.}
     \end{figure}
 
+    \subsection{Exact Polytropic Processes}
+
     Now we're in a position to define \emph{exact polytropic process}:
 
     \begin{definition}[exact polytropic process]\label{def:exact.poly.proc}
@@ -172,25 +176,60 @@
     It is worth noting that isochoric processes are equivalent to polytropic processes  with  $n
     \to \pm\infty$ between stated end states. Definition~\ref{def:exact.poly.proc} accounts  for
     the isochoric process non-unique polytropic exponent by explicitly including it as  a  valid
-    exact polytropic process.
+    exact polytropic process. The following is an inclusive theorem:
 
-    \begin{theorem}\label{cor:1}
+    \begin{theorem}[Matching definition]\label{theo:matching.def}
         Any logical process defined by  a  unique,  constant-polytropic  exponent  relation  and
-        non-identical end states---beyond which the defining polytropic relation no longer holds
-        true---is an exact polytropic process.
+        non-identical end states is an exact polytropic process.
     \end{theorem}
 
     \begin{proof}
         Such logical process definition statement fulfills the definition criteria for an  exact
-        polytropic process, and therefore, is by definition, an exact polytropic process.  Since
-        the definition prohibits  the  end  states  to  be  identical,  the  uniqueness  of  the
-        polytropic relation is guaranteed, for if end states ``1'' and ``2'' are identical, then
-        $P_1v_1^n = P_2v_2^n$ for any exponent $n$ since $P_1 = P_2$ and $v_1 = v_2$; otherwise,
-        only the defining $n$ would cause the relation to  hold  true  for  all  states  in  the
-        process path.
+        polytropic process, and therefore is, by definition, an exact polytropic process.  Since
+        such logical process definition prohibits the end states to be identical, the uniqueness
+        of the polytropic relation is  guaranteed,  for  if  end  states  ``1''  and  ``2''  are
+        identical, then $P_1v_1^n = P_2v_2^n$ for any exponent $n$ since $P_1 = P_2$ and $v_1  =
+        v_2$; otherwise, only the defining $n$ would cause the relation to  hold  true  for  all
+        states in the process path.
     \end{proof}
 
+    The matching definition theorem, or Theorem~\ref{theo:matching.def}, is instrumental in
+    recognizing (and proposing) valid exact polytropic processes. The following is an exclusive
+    theorem:
 
+    \begin{theorem}[Same end states]\label{theo:same.end.states}
+        No process, logical or otherwise, for which the end states are identical, is an exact
+        polytropic process.
+    \end{theorem}
+
+    \begin{proof}
+        If a process is not a logical one, it can't  be  an  exact  polytropic  process  by  its
+        definition. This leaves one only with identical  end  states  logical  processes.  Since
+        polytropic relationships $Pv^n = \mbox{const.}$ are monotonical, the only  way  its  end
+        states are identical is in the case of a no-process. From  the  proof  of  the  matching
+        definition Theorem~\ref{theo:matching.def},  the  unicity  of  such  polytropic  process
+        exponent   cannot   be   established,    thus    proving    the    same    end    states
+        Theorem~\ref{theo:same.end.states}.
+    \end{proof}
+
+    The same end states  theorem,  or  Theorem~\ref{theo:same.end.states},  is  instrumental  in
+    ruling out any process for which a condition holds true for  a  single  state  as  an  exact
+    polytropic  process,  as  is  the  case  of  recasting  a  constant  $Pv^n$  relation   with
+    \emph{continuously varying} $n$ as an (infinite) set of constant polytropic exponent logical
+    processes. From the same end states theorem one concludes that \emph{no} sub-process of such
+    a process is an exact polytropic process.
+
+    \begin{theorem}[Cycle]\label{theo:cycle}
+        No cycle is an exact polytropic process.
+    \end{theorem}
+
+    \begin{proof}
+        Since the defining feature of a cycle is same end states,  the  validity  of  the  cycle
+        theorem, Theorem~\ref{theo:cycle}, follows directly from the validity of  the  same  end
+        states theorem, Theorem~\ref{theo:same.end.states}.
+    \end{proof}
+
+    \subsection{Local Polytropic Processes}
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
