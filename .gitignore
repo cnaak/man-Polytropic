@@ -10,6 +10,9 @@ cc
 # Selected PDFs temporarily held back
 2020-NaaktgeborenC-PolyProc.pdf
 
+# My figure pdf's
+fig/*pdf
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
