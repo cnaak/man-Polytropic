@@ -114,7 +114,7 @@
     being the (infinite) sequence of (quasi-)equilibrium states visited by the system during the
     process. A process can be referred to by its path, with implicit or explicit end states.
 
-    It is worth noting that no constraints are stated for the end states of a ``process''.  This
+    It is worth noting that no constraints are stated for the end  states  of  a  process.  This
     allows for the needed flexibility in describing the variety of  transformations  on  systems
     and control volumes possible in engineering thermodynamics.
 
@@ -123,13 +123,15 @@
     merged together into super-processes that also fit the definition of a process.
 
     In order  to  make  the  intended  distinction  between  proposed  ``exact''  and  ``local''
-    polytropic processes, additional constraints need to be made to the process end states.  The
-    following defines a \emph{logical process}, which is a process with constrained end states:
+    polytropic processes, additional constraints need to be made  to  process  end  states.  The
+    following defines a \emph{logical} (thermodynamic) \emph{process}, which is a  process  with
+    constrained end states:
 
     \begin{definition}[logical process]\label{def:logical.proc}
-        Define logical process as one in which its stated defining conditions, that  define  all
-        of the allowed interactions for the underlying system or control volume, apply uniformly
-        from, but not earlier than, its initial state until, but not later than, its end state.
+        Define logical process as one in which its stated defining conditions,  that  determines
+        all of the allowed interactions or property  relations  for  the  underlying  system  or
+        control volume, apply uniformly from, but not earlier than, its initial state until, but
+        not later than, its end state.
     \end{definition}
 
     Therefore,   for   a   simple   compressible   system---admitting   only   work   and   heat
@@ -137,15 +139,17 @@
     or combinations of the two, define possible logical processes.
 
     \begin{example}\label{ex:ideal.Diesel}
-        The well-known air-standard ideal Diesel power cycle with ``intake''  state  (of  lowest
-        temperature and pressure) labeled as ``1'' can be divided in different ways  using  only
-        logical processes. One such division is: (i)~``isentropic compression'', (ii)~``isobaric
+        The   well-known   air-standard   ideal   Diesel    power    cycle,    illustrated    on
+        Figure~\ref{fig:cycle.Diesel},  with  ``intake''  state  (of  lowest   temperature   and
+        pressure) labeled as ``1'',  can  be  divided  in  different  ways  using  only  logical
+        processes.  One  such  division  is:  (i)~``isentropic  compression'',   (ii)~``isobaric
         heating'',  (iii)~``isentropic  expansion'',  and  (iv)~``isochoric   cooling'',   which
-        correspond to the ``1--2'', ``2--3'', ``3--4'', and  ``4--1''  canonical  processes  for
-        this cycle,  respectively.  Other  possibilities  include:  (a)~``any  work  temperature
-        increase'', and (b)~``non-compression pressure decrease'',  for  the  ``1--3''  (through
-        ``2'') and ``3--1''  (through  ``4'')  processes,  respectively,  since  these  are  the
-        farthermost end states that uniformly embrace the stated defining conditions.
+        correspond to the ``1--2'', ``2--3'', ``3--4'', and ``4--1'',  respectively,  i.e.,  the
+        canonical  processes  for  this  cycle.  Other  possibilities  include:  (a)~``any  work
+        temperature increase'', and (b)~``non-compression pressure decrease'', for the  ``1--3''
+        (through ``2'') and ``3--1'' (through ``4'') processes, respectively,  since  these  are
+        the farthermost end states that uniformly embrace the stated defining conditions (a) and
+        (b).
     \end{example}
 
     \begin{figure}[H] % Non-floating figures work inside multicolumns environment
@@ -155,6 +159,7 @@
         \caption{Air-standard ideal Diesel cycle in  logarithmic  $P\times  v$  coordinates,  in
             support for the Example~\ref{ex:ideal.Diesel}.}
     \end{figure}
+
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
