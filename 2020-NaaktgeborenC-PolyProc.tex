@@ -2,20 +2,35 @@
 % 2020-NaaktgeborenC-PolyProc.tex - by C. Naaktgeboren
 % License: CC-BY-NC-ND 4.0 - https://creativecommons.org/licenses/by-nc-nd/4.0/
 %-----------------------------------------------------------------------------------------------
-\documentclass[10pt,a4paper]{article}
+\documentclass[fleqn,10pt]{SelfArx}
 %-----------------------------------------------------------------------------------------------
-\usepackage[top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
-\usepackage{authblk}
+\usepackage[english]{babel}
 \usepackage{pslatex}
 \usepackage{graphicx}
 \usepackage[squaren,cdot]{SIunits}
-\usepackage{multicol}
-\usepackage{float}
 \usepackage{amsthm}
 \usepackage{amsmath}
 %-----------------------------------------------------------------------------------------------
-\setlength{\columnsep}{8mm}
+\setlength{\columnsep}{5.5mm}
 \setlength{\columnseprule}{0.4pt}
+\setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
+%-----------------------------------------------------------------------------------------------
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+\definecolor{color3}{RGB}{0,0,192} % Color of the article title and sections
+%-----------------------------------------------------------------------------------------------
+\usepackage[hyperindex,breaklinks]{hyperref} % Required for hyperlinks
+\hypersetup{%
+    hidelinks,
+    colorlinks,
+    breaklinks=true,
+    urlcolor=color3,
+    citecolor=color1,
+    linkcolor=color1,
+    bookmarksopen=false,
+    pdftitle={Title},
+    pdfauthor={Author}
+}
 %-----------------------------------------------------------------------------------------------
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
@@ -25,50 +40,52 @@
 \immediate\write18{datelog > \jobname.info} % site script: $(date -u '+%Y-%m-%d %Hh%Mm%Ss UTC')
 \makeatother
 %-----------------------------------------------------------------------------------------------
-\renewcommand\Affilfont{\itshape\small}
+% Journal information
+\JournalInfo{}
+\Archive{A Preprint}
+% Article title
+\PaperTitle{On Exact and Local Polytropic Processes -- Requisites, Etymology, and Modeling}
+\Authors{C.~Naaktgeboren\textsuperscript{1$\star$}}
+\affiliation{\textsuperscript{1}\textit{Universidade Tecnológica Federal  do  Paraná  --  UTFPR,
+Câmpus Guarapuava. Grupo de Pesquisa em Ciências Térmicas.}}
+\affiliation{\textsuperscript{$\star$}\textbf{Corresponding  author}:  NaaktgeborenC  (dot)  PhD
+(at) gmail (dot) com}
+\Keywords{Thermodynamics --- Polytropic  Processes  ---  Logical  Processes  ---  Etymology  ---
+Modeling}
+\newcommand{\keywordname}{Keywords}
 %-----------------------------------------------------------------------------------------------
-\title{%
-    On Exact and Local Polytropic Processes -- Requisites, Etymology, and Modeling \\[1.0ex]
-    {\normalsize\sc A Preprint}
-}
-\author[1]{C.~Naaktgeboren}
-\affil[1]{%
-    Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.\par
-    Grupo de Pesquisa em Ciências Térmicas.
-}
-\date{{\scriptsize\tt%
-    \includegraphics[height=6.0mm]{cc/by-nc-nd.pdf}\\
-    Compiled on \input{\jobname.info}
-}}
+\Abstract{Work in progress. Here goes the abstract...}
 %-----------------------------------------------------------------------------------------------
 \begin{document}
 %-----------------------------------------------------------------------------------------------
 
+\flushbottom
 \maketitle
-
-\begin{abstract}
-    Work in progress.
-    Here goes the abstract...
-\end{abstract}
-\vspace{0.5ex}
+\tableofcontents
+\thispagestyle{empty}
 
 %-----------------------------------------------------------------------------------------------
-{
-    \small\noindent\textbf{Keywords:}~Thermodynamics,  Polytropic  Processes,  Logical  Process,
-    Etymology, Modeling.
-} \vspace{1.5ex}
+\section*{License and Release Date}
+
+    \small\noindent%
+    \begin{minipage}{\columnwidth}
+        \centering\tt
+        \includegraphics[height=6.0mm]{cc/by-nc-nd.pdf}\\[0.5\smallskipamount]
+        \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}\\[0.5\smallskipamount]
+        Compiled on \input{\jobname.info}
+    \end{minipage}
+    \normalsize
 
 %-----------------------------------------------------------------------------------------------
-{
-    \small\noindent\textbf{Remarks:}~~%
-    $\bullet$~Defines \emph{logical thermodynamic process}
-    $\bullet$~Defines \emph{exact polytropic process}
-    $\bullet$~Brings new definition for \emph{local polytropic process}
-    $\bullet$~Defines theoretical \emph{requisites} for exact polytropic process.
-} \vspace{1.5ex}
+\section*{Remarks}
 
-%-----------------------------------------------------------------------------------------------
-\begin{multicols*}{2}
+    \small
+    This manuscript:
+    $\bullet$~defines \emph{logical thermodynamic process}
+    $\bullet$~defines \emph{exact polytropic process}
+    $\bullet$~brings new definition for \emph{local polytropic process}
+    $\bullet$~defines theoretical \emph{requisites} for exact polytropic process.
+    \normalsize
 
 %-----------------------------------------------------------------------------------------------
 \section{Introduction}
@@ -157,12 +174,12 @@
         (b).
     \end{example}
 
-    \begin{figure}[H] % Non-floating figures work inside multicolumns environment
+    \begin{figure}[ht]
         \centering
-        \label{fig:cycle.Diesel}
         \includegraphics[width=40mm]{fig/idealDieselExample.pdf}
         \caption{Air-standard ideal Diesel cycle in  logarithmic  $P\times  v$  coordinates,  in
             support for the Example~\ref{ex:ideal.Diesel}.}
+        \label{fig:cycle.Diesel}
     \end{figure}
 
     %---------------------------------------------------------------------------------------
@@ -258,11 +275,11 @@
     \times \log v$ coordinates. Basic derivative knowledge allows us to think of such process as
     one with a continuously variable slope in double logarithmic $P\times v$ coordinates.
 
-    \begin{figure}[H] % Non-floating figures work inside multicolumns environment
+    \begin{figure}[ht]
         \centering
-        \label{fig:non.exact}
         \includegraphics[width=40mm]{fig/nonExactPolytropic.pdf}
         \caption{A process displaying a curve in logarithmic $P\times v$ coordinates.}
+        \label{fig:non.exact}
     \end{figure}
 
     Attempting to represent the process as a set of straight line segments would  result  in  an
@@ -275,12 +292,12 @@
     decreasing amount of deviation. The beginning of such a process is depicted on
     Figure~\ref{fig:approx}.
 
-    \begin{figure}[H] % Non-floating figures work inside multicolumns environment
+    \begin{figure}[ht]
         \centering
-        \label{fig:approx}
         \includegraphics[width=40mm]{fig/approximations.pdf}
         \caption{Successive approximations to the curved process by means of 2, 4,  and  8  line
             segments in logarithmic $P\times v$ coordinates.}
+        \label{fig:approx}
     \end{figure}
 
 %-----------------------------------------------------------------------------------------------
@@ -293,9 +310,6 @@
 
 \bibliographystyle{plain}
 \bibliography{bibfile}
-
-%-----------------------------------------------------------------------------------------------
-\end{multicols*}
 
 %-----------------------------------------------------------------------------------------------
 \end{document}
