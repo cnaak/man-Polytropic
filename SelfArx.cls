@@ -57,7 +57,7 @@ letterpaper]{geometry}%
 %	FIGURES AND TABLES CAPTIONS
 %----------------------------------------------------------------------
 
-\RequirePackage[labelfont={bf,sf,small},%
+\RequirePackage[labelfont={bf,rm,small},%
 labelsep=period,%
 justification=raggedright]{caption}
 \setlength{\abovecaptionskip}{0pt}
