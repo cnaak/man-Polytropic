@@ -141,14 +141,18 @@ Modeling}
     definition.  This  allows  for  the  needed  flexibility  in  describing  the   variety   of
     transformations systems and control volumes can undergo in engineering thermodynamics.
 
-    This lack of end state constraints in the definition of a process  allows  processes  to  be
-    splitted into multiple sub-processes that still fit the definition of a process, as well as
-    merged together into super-processes that also fit the definition of a process.
+    This lack of end state constraints in the definition of a process allows them to be splitted
+    into multiple, successive `sub-processes' that still fit the definition  of  a  process,  as
+    well as merged multiple successive ones together into `super-processes' that  also  fit  the
+    definition of a process. This ability is extremely useful in grouping and splitting  systems
+    and control volumes along with their underlying processes---a commom practice in engineering
+    thermodynamics.
 
-    In order to make  the  intended  distinction  between  proposed  ``exact''  and  ``locally''
-    polytropic processes, additional constraints need to be made  to  process  end  states.  The
-    following defines a \emph{logical} (thermodynamic) \emph{process}, which is a  process  with
-    constrained end states:
+    Conversely, in order to  make  the  intended  distinction  between  proposed  ``exact''  and
+    ``locally'' polytropic processes, additional constraints need to  be  made  to  process  end
+    states. Thus, the following defines a  \emph{logical  thermodynamic  process},  which  is  a
+    thermodynamic process with constrained end  states.  In  context,  i.e.,  in  thermodynamics
+    texts, what's defined next can be simply called a ``logical process'':
 
     \begin{definition}[logical process]\label{def:logical.proc}
         Define logical process as one in which its stated defining conditions,  that  determines
