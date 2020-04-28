@@ -187,6 +187,7 @@ justification=raggedright]{caption}
 \newcommand{\JournalInfo}[1]{\def\@JournalInfo{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
 \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
+\newcommand{\Remarks}[1]{\def\@Remarks{#1}}
 
 % ---------------------------------------------------------------------
 
@@ -208,7 +209,12 @@ justification=raggedright]{caption}
 \sffamily\textbf{\abstractname}\\\@Abstract%
 \else%
 \sffamily\textbf{\abstractname}\\\@Abstract\\[4pt]%
+\fi%
+\ifx\@Remarks\@empty%
 \textbf{\keywordname}\\\@Keywords%
+\else%
+\textbf{\keywordname}\\\@Keywords\\[4pt]%
+\textbf{\remarkname}\\\@Remarks%
 \fi%
 }%
 }%
