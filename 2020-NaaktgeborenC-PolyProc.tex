@@ -2,12 +2,14 @@
 % 2020-NaaktgeborenC-PolyProc.tex - by C. Naaktgeboren
 % License: CC-BY-NC-ND 4.0 - https://creativecommons.org/licenses/by-nc-nd/4.0/
 %-----------------------------------------------------------------------------------------------
-\documentclass[fleqn,10pt]{SelfArx}
+\documentclass[fleqn,11pt]{SelfArx}
 %-----------------------------------------------------------------------------------------------
 \usepackage[english]{babel}
 \usepackage[squaren,cdot]{SIunits}
 \usepackage{amsthm}
+\usepackage{CormorantGaramond}
 %-----------------------------------------------------------------------------------------------
+\setlength{\abovecaptionskip}{4pt}
 \setlength{\columnsep}{5.5mm}
 \setlength{\columnseprule}{0.4pt}
 \setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
@@ -38,8 +40,8 @@
 \makeatother
 %-----------------------------------------------------------------------------------------------
 % Journal information
-\JournalInfo{}
-\Archive{A Preprint}
+\JournalInfo{Preprints Server Name} % TODO: Update-me
+\Archive{\today}                    % TODO: Latest upload date
 % Article title
 \PaperTitle{On Exact and Local Polytropic Processes -- Requisites, Etymology, and Modeling}
 \Authors{C.~Naaktgeboren\textsuperscript{1$\star$}}
@@ -74,11 +76,11 @@ Modeling}
 %-----------------------------------------------------------------------------------------------
 \section*{License and Release Date}
 
-    \small\noindent%
+    \footnotesize\noindent%
     \begin{minipage}{\columnwidth}
         \centering\tt
         \includegraphics[height=6.0mm]{cc/by-nc-nd.pdf}\\[0.5\smallskipamount]
-        \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}\\[0.5\smallskipamount]
+        {\scriptsize\url{https://creativecommons.org/licenses/by-nc-nd/4.0/}}\\[0.5\smallskipamount]
         Compiled on \input{\jobname.info}
     \end{minipage}
     \normalsize
