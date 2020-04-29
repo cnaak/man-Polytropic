@@ -11,6 +11,7 @@
 %-----------------------------------------------------------------------------------------------
 \newcommand{\parxyz}[3]{\left(\frac{\partial {{#1}}}{\partial {{#2}}}\right)_{{#3}}}
 \newcommand{\inlxyz}[3]{({\partial {{#1}}}/{\partial {{#2}}})_{{#3}}}
+\newcommand{\bri}[2]{(\partial {{#1}})_{{#2}}}
 %-----------------------------------------------------------------------------------------------
 \newcommand{\GRtxt}[1]{\begin{otherlanguage}{greek}{{#1}}\end{otherlanguage}}
 \newcommand{\FRtxt}[1]{\begin{otherlanguage}{french}{{#1}}\end{otherlanguage}}
@@ -534,7 +535,6 @@ Modeling}
     %---------------------------------------------------------------------------------------
     \subsection{General Substance Model Yielding $u\!:\!u(T)$}
 
-
     For $u\!:\!u(T)$ to hold, one must have:
     %
     \begin{equation}
@@ -542,7 +542,7 @@ Modeling}
         \label{eq:uT}
     \end{equation}
     %
-    \noindent for any choice of property $i$ other than $T$.
+    \noindent for \emph{any} choice of property $i$ other than $T$.
 
     Perhaps the easiest way of deriving the outcomes of Eq.~(\ref{eq:uT}) is by rewriting it  in
     terms of Bridgman's relations~\cite{2006-BejanA-Wiley}, which are expressed in  terms  of  a
@@ -551,15 +551,39 @@ Modeling}
     Eq.~(\ref{eq:uT}) in Bridgman's notation yields
     %
     \begin{equation}
-        \label{}
+        \frac{\bri uT}{\bri iT} \equiv \parxyz uiT = 0 \quad\rightharpoondown\quad \bri uT = 0.
+        \label{eq:uT.bri}
     \end{equation}
     %
+    It is worth noting than the $\equiv$ sign on Eq.~(\ref{eq:uT.bri}) indicates the  definition
+    of the \emph{ratio} between Bridgman's primitives $\bri  uT$  and  $\bri  iT$  in  terms  of
+    $\inlxyz uiT$, rather than the other way around.
 
+    Bridgman's relations are tabulated expressions for its \emph{individual primitives} in terms
+    of    thermodynamic    properties    that    are    easily    obtainable    from    physical
+    measurements~\cite{2006-BejanA-Wiley}, which makes them ingeniously useful.
+
+    Bridgman's  peculiar  notation  allowed  Eq.~(\ref{eq:uT})  to  be  expressed  in  terms  of
+    Bridgman's $\bri uT$ primitive only, thus eliminating  the  role  of  Bridgman's  $\bri  iT$
+    primitive, \emph{irrespective of the choice of property $i$}. This  greatly  simplifies  the
+    analysis of Eq.~(\ref{eq:uT})'s outcomes.
+
+    From reference~\cite{2006-BejanA-Wiley}, one has
     %
-    \begin{equation}
-        \label{}
-    \end{equation}
+    \begin{align}
+        \bri uT & = v(\beta T - \kappa P) = 0 & \rightharpoondown \\
+        \beta T & = \kappa P.
+        \label{eq:bT.kP}
+    \end{align}
     %
+    \noindent where $\beta$ is the \emph{volumetric coefficient of thermal  expansion},  or  the
+    \emph{volume  expansivity}~\cite{2006-BejanA-Wiley},  or  the  \emph{coefficient  of  volume
+    expansion}~\cite{1986-JonesJB+HawkinsGA-Wiley},  and  $\kappa$   is   the   \emph{isothermal
+    compressibility}~\cite{2006-BejanA-Wiley}, also denoted as $\kappa_T$, as to distinguish  it
+    from the isentropic compressibility, $\kappa_s$~\cite{1986-JonesJB+HawkinsGA-Wiley}.
+
+    Put differently, any substance for which $\beta T = \kappa P$ will have $u\!:\!u(T)$ only.
+
 
     %
     \begin{equation}
