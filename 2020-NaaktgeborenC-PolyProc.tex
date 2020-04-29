@@ -442,6 +442,32 @@ Modeling}
     general approximability conjecture, above.
 
 %-----------------------------------------------------------------------------------------------
+\section{Requisites for Exact Polytropic Processes}
+
+    One can show that the polytropic relation, Equation~(\ref{eq:poly}), is the solution of
+    %
+    \begin{equation}
+        \frac{dP}{P} = -n\frac{dv}{v},
+        \label{eq:poly.ODE}
+    \end{equation}
+    %
+    \noindent with $n$ not a function of either $P$ or $v$:
+    %
+    \begin{align}
+        \int\frac{dP}{P} & = -n\int\frac{dv}{v} & \rightharpoondown
+        \\
+        \log P + \mathsf{c_1} & = -n\log v + \mathsf{c_2} & \rightharpoondown
+        \\
+        \log P & = -n\log v + \mathsf{c_3} & \rightharpoondown
+        \\
+        \log P + n\log v & = \mathsf{c_3} & \rightharpoondown
+        \\
+        Pv^n & = e^{\mathsf{c_3}} \equiv \mathsf{c},
+    \end{align}
+    %
+    \noindent thus recovering Equation~(\ref{eq:poly}).
+
+%-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
 
     This research received no specific grant from any funding agency in the public, private,  or
