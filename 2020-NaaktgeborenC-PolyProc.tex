@@ -485,6 +485,8 @@ Modeling}
     \noindent yield a polytropic relation between $P$ and $v$ with a constant exponent $n = (1 -
     \gamma)K + \gamma$.
 
+    In this work, $K$ is also reffered to as \emph{heat-to-work transfer ratio}.
+
     The employed $Pv = ZRT$ equation of state is indicative of real gases; however, the constant
     $Z$ assumption narrows down the scope of the result. This prompts the  question  of  whether
     this finding is actually only applicable to ideal gases, for which $Z=1$, or  whether  other
@@ -510,6 +512,7 @@ Modeling}
         \delta q - \delta w & = du, & \rightharpoondown
         \label{eq:1st.law.int.diff} \\
         (K-1)\delta w & = du,
+        \label{eq:1st.law.int.diff.K}
     \end{align}
     %
     \noindent in which Equation~(\ref{eq:def.K}) is used.
@@ -627,36 +630,44 @@ Modeling}
     %---------------------------------------------------------------------------------------
     \subsection{Energy Balance with a $u\!:\!u(T)$ Model}
 
-    \begin{equation}
-        \label{}
-    \end{equation}
-    %
-
-    Pluggin
+    Plugging  in  $du  =  c_v\,dT$  on  Eq.~(\ref{eq:1st.law.int.diff.K})  and   differentiating
+    Eq.~(\ref{eq:uT.EoS}) will make a $dT$ appear on both equations. Equating  the  common  $dT$
+    leads to
     %
     \begin{equation}
-        \delta q - \delta w = du \quad\rightharpoondown\quad (K-1)\delta w = du.
-        \label{eq:1stlaw}
+        dT = \frac{K-1}{c_v}Pdv = \frac{Pf'(v)dv + f(v)dP}{R},
+        \label{eq:dT.1st.law.EoS}
     \end{equation}
+    %
+    \noindent where $f'(v) = df/dv$.
 
+    The   goal   now   is   to   write   Eq.~(\ref{eq:dT.1st.law.EoS})   in    the    form    of
+    Eq.~(\ref{eq:poly.ODE}), with constant $n$, which yields
     %
     \begin{equation}
-        \label{}
+        \frac{dP}{P} = - [f'(v) + (1 - K)(\gamma - 1)]\frac{dv}{f(v)},
+        \label{eq:Pv.ODE}
     \end{equation}
     %
-
+    \noindent which, by inspection, gives the polytropic exponent as
     %
     \begin{equation}
-        \label{}
+        n \equiv f'(v) + (1 - K)(\gamma - 1).
+        \label{eq:n}
     \end{equation}
     %
+    The constancy of $n$ depends on the constancy of $f'(v)$, and $(1 - K)(\gamma - 1)$.
 
+    From constant $f'(v) = df/dv = \mathsf{c_1}$, one has
     %
     \begin{equation}
-        \label{}
+        f(v) = \mathsf{c_1}v + \mathsf{c_2},
+        \label{eq:f.form}
     \end{equation}
     %
+    \noindent with constant $\mathsf{c_1}$ and $\mathsf{c_2}$.
 
+    From the constant $K$ criterion
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
