@@ -103,3 +103,17 @@
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+% Encoding: UTF-8
+
+@Book{1968-Chantraine-Klincksieck,
+  title     = {Dictionnaire étymologique de la langue grecque: histoire des mots},
+  publisher = {Éditions Klincksieck},
+  year      = {1968},
+  author    = {Chantraine, Pierre},
+  address   = {Paris},
+  file      = {:1968-Chantraine-Klincksieck.pdf:PDF},
+  url       = {https://www/archive.org/download/Dictionnaire-Etymologique-Grec},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
