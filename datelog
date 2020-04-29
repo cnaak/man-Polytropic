@@ -1,4 +1,4 @@
 #!/bin/bash
 
-date --utc '+%Y-%m-%d %Hh%Mm%Ss UTC'
+date --utc '+%Y-%m-%d %H:%M:%S UTC'
 
