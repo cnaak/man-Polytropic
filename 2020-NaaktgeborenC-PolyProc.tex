@@ -34,6 +34,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
 %-----------------------------------------------------------------------------------------------
 \makeatletter
 \immediate\write18{datelog > \jobname.info} % site script: $(date -u '+%Y-%m-%d %Hh%Mm%Ss UTC')
@@ -214,7 +215,7 @@ Modeling}
     It is worth noting that isochoric processes are equivalent to polytropic processes  with  $n
     \to \pm\infty$ between stated end states. Definition~\ref{def:exact.poly.proc} accounts  for
     the isochoric process non-unique polytropic exponent by explicitly including it as  a  valid
-    exact polytropic process. The following is an inclusive lemma:
+    exact polytropic process.
 
     \begin{lemma}\label{lemm:matching.def}
         Any logical process defined by a single polytropic relation  with  a  unique  polytropic
@@ -223,13 +224,59 @@ Modeling}
     \end{lemma}
 
     \begin{proof}
-        Such logical process definition statement fulfills the definition criteria for an  exact
-        polytropic process, and therefore is, by definition, an exact polytropic process.  Since
-        such logical process definition prohibits the end states to be identical, the uniqueness
-        of the polytropic relation is  guaranteed,  for  if  end  states  ``1''  and  ``2''  are
-        identical, then $P_1v_1^n = P_2v_2^n$ for any exponent $n$ since $P_1 = P_2$ and $v_1  =
-        v_2$; otherwise, only the defining $n$ would cause the relation to  hold  true  for  all
-        states in the process path.
+        Let a logical process $\mathcal{P}$ be defined by a single polytropic  relation  with  a
+        unique polytropic exponent $n$, with non-identical end states ``$1$'' and  ``$2$''  that
+        contains a set of reversal states ``$r_i$'', with $\{ i \in \mathbb{Z} | i  \geqslant  1
+        \}$ in its path.
+
+        Without loss of generality, let further $P_{r_1}  <  P_1$,  if  $n  \neq  0$,  i.e.,  an
+        initially pressure-decreasing process---since the following argument  can  be  otherwise
+        flipped, or laid out in $v$, for finite $n$:
+
+        Let state ``$\epsilon$'', defined as $(P_{\epsilon}, v_{\epsilon})$, belong to the  path
+        of a sub-process ``$1$--$r_1$'' of the original logical process, so that
+        %
+        \begin{equation}
+            P_{\epsilon} - P_{r_1} = \Delta P \to 0.
+            \label{eq:proof.Delta.P.epsi}
+        \end{equation}
+        %
+        Since ``$\epsilon$'' also belongs to the original logical process, it follows from the
+        logical process definition
+        %
+        \begin{equation}
+            P_{\epsilon}v_{\epsilon}^n = P_1v_1^n = P_{r_1}v_{r_1}^n.
+            \label{eq:proof.Process.epsi}
+        \end{equation}
+        %
+        Since at ``$r_1$'', the process experiments a reversal, thus proceeding with  increasing
+        pressures. Let state ``$\zeta$'', defined as $(P_{\zeta},  v_{\zeta})$,  belong  to  the
+        path of a sub-process ``$r_1$--$2$'' of the original logical process, so that
+        %
+        \begin{align}
+            P_{\zeta} & = P_{\epsilon} \quad\rightharpoondown 
+            \label{eq:proof.P.zeta} \\
+            P_{\zeta} - P_{r_1} & = \Delta P \to 0.
+            \label{eq:proof.Delta.P.zeta}
+        \end{align}
+        %
+        Since ``$\zeta$'' also belongs to the original logical process, it follows from the
+        logical process definition,
+        %
+        \begin{align}
+            P_{\zeta}v_{\zeta}^n & = P_{r_1}v_{r_1}^n = P_{\epsilon}v_{\epsilon}^n\quad\rightharpoondown
+            \label{eq:proof.Process.zeta} \\
+            P_{\epsilon}v_{\zeta}^n & = P_{\epsilon}v_{\epsilon}^n \quad\rightharpoondown \\
+            v_{\zeta}^n & = v_{\epsilon}^n \quad\rightharpoondown \\
+            v_{\zeta} & = v_{\epsilon}
+            \label{eq:proof.vzeta=vepsi}
+        \end{align}
+        %
+        Thus showing states ``$\epsilon$'' and ``$\zeta$'' to be identical.
+
+        Given that the polytropic exponent is unique, any reversal would  cause  the  underlying
+        system or control volume to re-visit states already covered, thus  violating  the  exact
+        polytropic process definition:
     \end{proof}
 
     The matching definition theorem, or Theorem~\ref{theo:matching.def}, is instrumental in
