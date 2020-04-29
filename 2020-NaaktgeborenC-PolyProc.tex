@@ -209,7 +209,8 @@ Modeling}
         An exact polytropic process is a  logical  process  in  which  either  (i)~a  polytropic
         relation $Pv^n = \mbox{const.}$, with a  unique  polytropic  exponent  $n$,  or  (ii)~an
         isochoric logical condition, can be its sole logical defining condition,  provided  that
-        no state in its path is visited more than once.
+        no state in its path is visited more than once or serves simultaneously as  initial  and
+        final end states in a given execution.
     \end{definition}
 
     It is worth noting that isochoric processes are equivalent to polytropic processes  with  $n
@@ -217,7 +218,7 @@ Modeling}
     the isochoric process non-unique polytropic exponent by explicitly including it as  a  valid
     exact polytropic process.
 
-    \begin{lemma}\label{lemm:matching.def}
+    \begin{lemma}\label{lemm:no.reversal}
         Any logical process defined by a single polytropic relation  with  a  unique  polytropic
         exponent, with non-identical end states can only be an exact polytropic process  in  the
         absence of reversals in its path.
@@ -283,34 +284,29 @@ Modeling}
         Therefore,      by      the       exact       polytropic       process       definition,
         Definition~\ref{def:exact.poly.proc}, logical process $\mathcal{P}_{1,2}$ cannot  be  an
         exact   polytropic   process,   since   there   is   at    least    one    state---state
-        ``$\epsilon$''---that is visited more than once.
-
-        Put in words: given that the polytropic exponent is unique, any reversal would cause the
-        underlying system or control volume to re-visit states already covered,  thus  violating
-        the exact polytropic process definition.
+        ``$\epsilon$''---that is visited more than once in a given execution.
     \end{proof}
 
-    The same end states  theorem,  or  Theorem~\ref{theo:same.end.states},  is  instrumental  in
-    ruling out any process for which a condition holds true for  a  single  state  as  an  exact
-    polytropic  process,  as  is  the  case  of  recasting  a  constant  $Pv^n$  relation   with
-    \emph{continuously varying} $n$ as an (infinite) set of constant polytropic exponent logical
-    processes. From the same end states theorem one concludes that \emph{no} sub-process of such
-    a process is an exact polytropic process.
+    \noindent\textit{Remarks:\/}~given that the polytropic  exponent  is  unique,  any  reversal
+    would cause the underlying system or control volume to re-visit states already covered, thus
+    violating the exact polytropic process definition.
 
     \begin{theorem}[Cycle]\label{theo:cycle}
         No cycle is an exact polytropic process.
     \end{theorem}
 
     \begin{proof}
-        Since the defining feature of a cycle is same end states,  the  validity  of  the  cycle
-        theorem, Theorem~\ref{theo:cycle}, follows directly from the validity of  the  same  end
-        states theorem, Theorem~\ref{theo:same.end.states}.
+        The defining feature of a cycle of same end states directly violates the restriction  of
+        no same initial and end states.
     \end{proof}
 
-    %---------------------------------------------------------------------------------------
-    \subsection{Locally Polytropic Processes}
+    \noindent\textit{Remarks:\/}~even if a cycle can be collapsed down as  to  be  described  in
+    terms of a single polytropic process, such as an ideal Diesel cycle with fuel cut ratio $r_c
+    \equiv v_3 / v_2 = 1$, the fact that  such  a  cycle  must  invariably  make  at  least  one
+    reversal, as to cycle back to previous states, Lemma~\ref{lemm:no.reversal} would constitute
+    a second reason to disqualify the cycle as a (single) exact polytropic process.
 
-    For a polytropic process, one has: %
+    For an exact polytropic process, one has, between its end states extrema:%
     %
     \begin{align}
         Pv^n & = c_1 = \text{const.}        & \rightharpoondown\\
@@ -318,16 +314,19 @@ Modeling}
         \log P + n\log v & = c_2            & \rightharpoondown\\
         \log P & = -n\log v + c_2. \label{eq:affine}
     \end{align}
-
+    %
     Equation~(\ref{eq:affine}) is an affine relationship between $\log P$ and $\log v$---a  line
-    segment within the polytropic process end states---in  which  the  polytropic  exponent  $n$
+    segment that links the process end states extrema---in which  the  polytropic  exponent  $n$
     figures as the negative of the line segment slope.
 
     Figure~\ref{fig:cycle.Diesel} is drawn in $\log P \times \log v$  coordinates,  and  depicts
-    one line segment between each adjacent labeled state  pair  ``1--2'',  ``2--3'',  etc.  This
-    means  all  roman-numbered  logical  process  in  Example~\ref{ex:ideal.Diesel}  are   exact
-    polytropic processes, since (i)~they are logical processes that (ii)~can be represented by a
-    unique polytropic relation with constant $n$.
+    one line segment between each  adjacent  labeled  state  pairs  ``$1$--$2$'',  ``$2$--$3$'',
+    ``$3$--$4$'', and ``$4$--$1$'', in which  all  labeled  states  are  extrema  of  each  line
+    segment,  and  there  are  no  reversals.  Therefore,  all  such  processes,  enumerated  on
+    Example~\ref{ex:ideal.Diesel} with roman numerals (i)--(iv), are exact polytropic ones.
+
+    %---------------------------------------------------------------------------------------
+    \subsection{Locally Polytropic Processes}
 
     Figure~\ref{fig:non.exact} illustrates a process that plots as a curved segment in  $\log  P
     \times \log v$ coordinates. Basic derivative knowledge allows us to think of such process as
