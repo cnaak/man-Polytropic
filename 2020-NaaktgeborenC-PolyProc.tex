@@ -9,6 +9,9 @@
 \usepackage{amsthm}
 \usepackage{CormorantGaramond}
 %-----------------------------------------------------------------------------------------------
+\newcommand{\parxyz}[3]{\left(\frac{\partial {{#1}}}{\partial {{#2}}}\right)_{{#3}}}
+\newcommand{\inlxyz}[3]{({\partial {{#1}}}/{\partial {{#2}}})_{{#3}}}
+%-----------------------------------------------------------------------------------------------
 \newcommand{\GRtxt}[1]{\begin{otherlanguage}{greek}{{#1}}\end{otherlanguage}}
 \newcommand{\FRtxt}[1]{\begin{otherlanguage}{french}{{#1}}\end{otherlanguage}}
 %-----------------------------------------------------------------------------------------------
@@ -469,8 +472,9 @@ Modeling}
 
     The  work  of  Christians~\cite{2012-ChristiansJ-IntJMechEngEduc}  shows   that   internally
     reversible processes in closed systems with a callorically perfect gas with  a  $Pv  =  ZRT$
-    equation of state with constant $Z$, assuming  negligible  changes  in  system  kinetic  and
-    potential energies and constant energy transfer ratio,
+    equation of state with constant compressibility factor $Z$, defined  as  $Z  \equiv  Pv/RT$,
+    assuming negligible changes in system kinetic and potential  energies  and  constant  energy
+    transfer ratio,
     %
     \begin{equation}
         K \equiv \frac{\delta q}{\delta w},
@@ -509,14 +513,42 @@ Modeling}
     %
     \noindent in which Equation~(\ref{eq:def.K}) is used.
 
-    At this point, reference~\cite{2012-ChristiansJ-IntJMechEngEduc} replaces $du$ by  $c_v\,dT$
-    and continues the analysis with a $Pv = ZRT$  equation  of  state  with  the  assumption  of
-    constant $Z$, based either on ideal gas behavior or  in  processes  of  small  pressure  and
-    temperature variation, recall $Z$ is actually $Z:Z(T_r, P_r)$; shortly after, the $ZR$  term
-    is replaced by $(c_p - c_v)$, which recovers an ideal gas result.
+    At  this   point,   reference~\cite{2012-ChristiansJ-IntJMechEngEduc}   replaces   $du$   by
+    $c_v\,dT$---where $c_v$ and $c_p$ are the constant-volume  and  constant-pressure  substance
+    specific heats, respectively---and continues the analysis with a  $Pv  =  ZRT$  equation  of
+    state with the assumption of constant $Z$. Shortly after, the $ZR$ term is replaced by $(c_p
+    - c_v)$, which recovers an ideal gas result, as $ZR = (c_p - c_v)$ cannot  hold  in  general
+    for a real gas, as, for instance, its error approaches infinity in the close vicinity of the
+    critical state, even if appoached from the monophase region, due to $c_p \to  +\infty$  with
+    all other quantities remaining finite.
 
-    The following demonstrates that  assuming  $u:u(T)$  actually  implies  $Z:Z(v)$---a  useful
-    intermediate result.
+    Moreover, a constant $Z$ must be either based on (i)~ideal gas  behavior  or  on  (ii)~small
+    process pressure and temperature variations, as experimental  results  associated  with  the
+    real gas equation of state are generalized for $Z\!:\!Z(T_r, P_r)$, where  $T_r$  and  $P_r$
+    are respectively the reduced  (dimensionless),  critical-state-normalized,  temperature  and
+    pressure.
+
+    On the other hand, the  following  theoretically  demonstrates  that  assuming  $u\!:\!u(T)$
+    actually implies $Z\!:\!Z(v)$---a useful intermediate result.
+
+    %---------------------------------------------------------------------------------------
+    \subsection{General Substance Model Yielding $u\!:\!u(T)$}
+
+
+    For $u\!:\!u(T)$ to hold, one must have:
+    %
+    \begin{equation}
+        \parxyz uiT = 0.
+        \label{eq:uT}
+    \end{equation}
+    %
+    \noindent for any choice of property $i$ other than $T$.
+
+    Perhaps the easiest way of deriving the outcomes of Eq.~(\ref{eq:uT}) is by rewriting it  in
+    terms of Bridgman's relations~\cite{2006-BejanA-Wiley}, which are expressed in  terms  of  a
+    peculiar notation\footnote{For  information  on  Bridgman's  relations  and  its  associated
+    peculiar  notation,  consult  reference~\cite{2006-BejanA-Wiley}.}.   Therefore,   rewriting
+    Eq.~(\ref{eq:uT}) in Bridgman's notation yields
     %
     \begin{equation}
         \label{}
