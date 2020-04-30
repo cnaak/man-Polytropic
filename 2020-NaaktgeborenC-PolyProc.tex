@@ -9,7 +9,7 @@
 \usepackage{amsthm}
 \usepackage{CormorantGaramond}
 %-----------------------------------------------------------------------------------------------
-\newcommand{\parxyz}[3]{\left(\frac{\partial {{#1}}}{\partial {{#2}}}\right)_{{#3}}}
+\newcommand{\parxyz}[3]{\left(\frac{\partial {{#1}}}{\partial {{#2}}}\right)_{\!\!\!{#3}}}
 \newcommand{\inlxyz}[3]{({\partial {{#1}}}/{\partial {{#2}}})_{{#3}}}
 \newcommand{\bri}[2]{(\partial {{#1}})_{{#2}}}
 %-----------------------------------------------------------------------------------------------
@@ -607,8 +607,8 @@ Modeling}
     %
     \begin{align}
         \parxyz TPv & = \frac{T}{P} & \rightharpoondown \\
-        \left(\frac{\partial T}{T}\right)_v & =
-            \left(\frac{\partial P}{P}\right)_v & \rightharpoondown \\
+        \left(\frac{\partial T}{T}\right)_{\!\!\!v} & =
+            \left(\frac{\partial P}{P}\right)_{\!\!\!v} & \rightharpoondown \\
         T & = \mathsf{f}(v)P,
         \label{eq:uT.TPv}
     \end{align}
@@ -650,9 +650,9 @@ Modeling}
     Eqs.~(\ref{eq:ds.Tv}) and~(\ref{eq:ds.TP}), yields~\cite{2013-CengelYA+BolesMA-AMGH}:
     %
     \begin{align}
-        \parxyz{c_v}vT & = +T\left(\frac{\partial^2P}{\partial T^2}\right)_v,\quad\mbox{and}
-        \label{eq:cv.test} \\
-        \parxyz{c_P}PT & = -T\left(\frac{\partial^2v}{\partial T^2}\right)_P.
+        \parxyz{c_v}vT & = +T\left(\frac{\partial^2P}{\partial T^2}\right)_{\!\!\!v},
+        \quad\mbox{and}\label{eq:cv.test} \\
+        \parxyz{c_P}PT & = -T\left(\frac{\partial^2v}{\partial T^2}\right)_{\!\!\!P}.
         \label{eq:cp.test}
     \end{align}
 
@@ -665,7 +665,7 @@ Modeling}
     \begin{align}
         P & = \frac{RT}{f(v)} & \rightharpoondown \\
         \parxyz PTv & = \frac{R}{f(v)} & \rightharpoondown \\
-        \left(\frac{\partial^2P}{\partial T^2}\right)_v & = 0.
+        \left(\frac{\partial^2P}{\partial T^2}\right)_{\!\!\!v} & = 0.
         \label{eq:cv.test.0}
     \end{align}
 
@@ -676,8 +676,9 @@ Modeling}
     %
     \begin{align}
         v & = \frac{RT}{P\mathsf{g}(v)} & \rightharpoondown \\
-        \parxyz vTP & = \frac{R}{P\mathsf{g}(v)} & \rightharpoondown \\
-        \left(\frac{\partial^2v}{\partial T^2}\right)_P & = 0.
+        \parxyz vTP & = \frac{R}{P\mathsf{g}(v)} & \rightharpoondown
+        \label{eq:vTP} \\
+        \left(\frac{\partial^2v}{\partial T^2}\right)_{\!\!\!P} & = 0.
         \label{eq:cp.test.0}
     \end{align}
 
@@ -690,6 +691,35 @@ Modeling}
     \end{equation}
     %
     \noindent one also has $\gamma\!:\!\gamma(T)$ at best for this substance.
+
+    The textbook expression for $dh$ is~\cite{2013-CengelYA+BolesMA-AMGH}:
+    %
+    \begin{align}
+        dh & = \parxyz hPT \,dT + \parxyz hTP \,dP \\
+        dh & = c_p\,dT + \left[v - T\parxyz vTP \right]\,dP.
+        \label{eq:dh}
+    \end{align}
+
+    From Eq.~(\ref{eq:vTP}), the $\inlxyz hTP$ term can be written as
+    %
+    \begin{align}
+        \parxyz hTP & = v - T\parxyz vTP & \rightharpoondown \\
+        \parxyz hTP & = v - \frac{RT}{P\mathsf{g}(v)} & \rightharpoondown \\
+        \parxyz hTP & = v - v = 0,
+        \label{eq:hTP}
+    \end{align}
+    %
+    \noindent thus making $h\!:\!h(T)$ for a substance with $Pf(v) = RT$ equation of state.
+
+    Therefore, a $u\!:\!u(T)$ substance also has
+    %
+    \begin{equation}
+        c_v\!:\!c_v(T),\mbox{ }
+        c_P\!:\!c_P(T),\mbox{ }
+        \gamma\!:\!\gamma(T),\mbox{ and }
+        h\!:\!h(T).
+        \label{eq:uT.outcomes}
+    \end{equation}
 
     %---------------------------------------------------------------------------------------
     \subsection{Energy Balance with a $u\!:\!u(T)$ Model}
