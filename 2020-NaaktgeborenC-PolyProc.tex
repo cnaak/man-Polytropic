@@ -760,6 +760,30 @@ Modeling}
 
     The constancy of $n$ depends  on  the  constancy  of  all  of  Eq.~(\ref{eq:n.deps})  terms.
     Enforcing this condition upon the first term leads to the following ODE:
+    %
+    \begin{align}
+        \frac{v}{f}\frac{df}{dv} & = \mathsf{c_1} & \rightharpoondown \\
+        \frac{df}{f} & = \mathsf{c_1}\frac{dv}{v} & \rightharpoondown \\
+        f(v) = v^{\mathsf{c_1}} + \mathsf{c_2}.
+        \label{eq:f.two.consts}
+    \end{align}
+
+    The second term of Eq.~(\ref{eq:n.deps}) contains $v$ and $T$ functions. Enforcing constancy
+    separately in $v$ terms yields:
+    %
+    \begin{align}
+        \frac{v}{f(v)} & = \mathsf{c_3} & \rightharpoondown \\
+        \frac{v}{v^{\mathsf{c_1}} + \mathsf{c_2}} & = \mathsf{c_3}
+        \label{eq:f.three.consts}
+    \end{align}
+    %
+    \noindent yields $\mathsf{c_1} = 1$, $\mathsf{c_2} = 0$, with $\mathsf{c_3} = 1$ being the
+    only possibility for constancy in $v$ terms. This result finally fixed the subtance equation
+    of state by fixing $f(x)$ as
+    %
+    \begin{equation}
+    \end{equation}
+
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
