@@ -555,7 +555,7 @@ Modeling}
         \frac{\bri uT}{\bri iT} \equiv \parxyz uiT = 0 \quad\rightharpoondown\quad \bri uT = 0.
         \label{eq:uT.bri}
     \end{equation}
-    %
+
     It is worth noting than the $\equiv$ sign on Eq.~(\ref{eq:uT.bri}) indicates the  definition
     of the \emph{ratio} between Bridgman's primitives $\bri  uT$  and  $\bri  iT$  in  terms  of
     $\inlxyz uiT$, rather than the other way around.
@@ -594,7 +594,7 @@ Modeling}
         \kappa \equiv \frac{-1}{v}\parxyz vPT.
         \label{eq:defs.aux}
     \end{equation}
-    %
+
     Plugging  in  Eq.~(\ref{eq:defs.aux})  on  Eq.~(\ref{eq:bT.kP})   and   using   the   cyclic
     relationship,
     %
@@ -637,7 +637,7 @@ Modeling}
         ds = \frac{c_v}{T}\,dT + \parxyz PTv\,dv.
         \label{eq:ds.Tv}
     \end{equation}
-    %
+
     Writing $s\!:\!s(T, P)$ and differentiating, with $dh =  T\,ds  +  v\,dP$  and  the  Maxwell
     relation based on the Gibbs energy, $\inlxyz sPT = -\inlxyz vTP$, one arrives at
     %
@@ -645,7 +645,7 @@ Modeling}
         ds = \frac{c_p}{T}\,dT - \parxyz vTP\,dP.
         \label{eq:ds.TP}
     \end{equation}
-    %
+
     Equating  the  cross  derivatives  from  the  $dT$  and  $dv$  (or  $dP$)  coefficients   on
     Eqs.~(\ref{eq:ds.Tv}) and~(\ref{eq:ds.TP}), yields~\cite{2013-CengelYA+BolesMA-AMGH}:
     %
@@ -655,7 +655,7 @@ Modeling}
         \parxyz{c_P}PT & = -T\left(\frac{\partial^2v}{\partial T^2}\right)_P.
         \label{eq:cp.test}
     \end{align}
-    %
+
     Eqs.~(\ref{eq:cv.test}) and~(\ref{eq:cp.test}) are to be used  in  determining  whether  the
     specific heats of a substance with equation of  state  given  by  Eq.~(\ref{eq:uT.EoS})  are
     functions of.
@@ -668,11 +668,28 @@ Modeling}
         \left(\frac{\partial^2P}{\partial T^2}\right)_v & = 0.
         \label{eq:cv.test.0}
     \end{align}
-    %
+
     Therefore, $\inlxyz{c_v}vT = 0$ making $c_v\!:\!c_v(T)$ at best for a  Eq.~(\ref{eq:uT.EoS})
     substance.
 
-    Similarly, from Eq.~(\ref{eq:uT.EoS}), one has:
+    Let $\mathsf{g}(v) \equiv f(v)/v$. From Eq.~(\ref{eq:uT.EoS}), one has:
+    %
+    \begin{align}
+        v & = \frac{RT}{P\mathsf{g}(v)} & \rightharpoondown \\
+        \parxyz vTP & = \frac{R}{P\mathsf{g}(v)} & \rightharpoondown \\
+        \left(\frac{\partial^2v}{\partial T^2}\right)_P & = 0.
+        \label{eq:cp.test.0}
+    \end{align}
+
+    Therefore, $\inlxyz{c_P}PT = 0$ making $c_P\!:\!c_P(T)$ at best for a  Eq.~(\ref{eq:uT.EoS})
+    substance. Moreover, since
+    %
+    \begin{equation}
+        \gamma \equiv \frac{c_p}{c_v},
+        \label{eq:def.gamma}
+    \end{equation}
+    %
+    \noindent one also has $\gamma\!:\!\gamma(T)$ at best for this substance.
 
     %---------------------------------------------------------------------------------------
     \subsection{Energy Balance with a $u\!:\!u(T)$ Model}
@@ -702,7 +719,7 @@ Modeling}
         n \equiv f'(v) + (1 - K)(\gamma - 1).
         \label{eq:n}
     \end{equation}
-    %
+
     The constancy of $n$ depends on the constancy of $f'(v)$, and $(1 - K)(\gamma - 1)$.
 
     From constant $f'(v) = df/dv = \mathsf{c_1}$, one has
