@@ -742,30 +742,24 @@ Modeling}
     The   goal   now   is   to   write   Eq.~(\ref{eq:dT.1st.law.EoS})   in    the    form    of
     Eq.~(\ref{eq:poly.ODE}), with constant $n$, which yields
     %
-    \begin{equation}
-        \frac{dP}{P} = - [f'(v) + (1 - K)(\gamma - 1)]\frac{dv}{f(v)},
+    \begin{align}
+        \frac{dP}{P} & = - [f'(v) + (1 - K)(\gamma - 1)]\frac{dv}{f(v)}\quad\rightharpoondown\\
+        \frac{dP}{P} & = -\frac{f'(v) + (1 - K)(\gamma - 1)}{\mathsf{g}(v)}\frac{dv}{v},
         \label{eq:Pv.ODE}
-    \end{equation}
+    \end{align}
     %
-    \noindent which, by inspection, gives the polytropic exponent as
+    \noindent in which $\mathsf{g}(v)$ is defined by Eq.~(\ref{eq:def.g}). By inspection,  gives
+    the polytropic exponent as:
     %
-    \begin{equation}
-        n \equiv f'(v) + (1 - K)(\gamma - 1).
-        \label{eq:n}
-    \end{equation}
+    \begin{align}
+        n & \equiv \frac{f'(v) + (1 - K)(\gamma - 1)}{\mathsf{g}(v)} & \rightharpoondown
+        \label{eq:n} \\
+        n & = \frac{vf'(v)}{f(v)} + (1 - K)[\gamma(T) - 1]\frac{v}{f(v)}.
+        \label{eq:n.deps}
+    \end{align}
 
-    The constancy of $n$ depends on the constancy of $f'(v)$, and $(1 - K)(\gamma - 1)$.
-
-    From constant $f'(v) = df/dv = \mathsf{c_1}$, one has
-    %
-    \begin{equation}
-        f(v) = \mathsf{c_1}v + \mathsf{c_2},
-        \label{eq:f.form}
-    \end{equation}
-    %
-    \noindent with constant $\mathsf{c_1}$ and $\mathsf{c_2}$.
-
-    From the constant $K$ criterion
+    The constancy of $n$ depends  on  the  constancy  of  all  of  Eq.~(\ref{eq:n.deps})  terms.
+    Enforcing this condition upon the first term leads to the following ODE:
 
 %-----------------------------------------------------------------------------------------------
 \section*{Acknowledgments}
