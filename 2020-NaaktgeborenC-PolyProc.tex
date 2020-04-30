@@ -536,7 +536,7 @@ Modeling}
     actually implies $Z\!:\!Z(v)$---a useful intermediate result.
 
     %---------------------------------------------------------------------------------------
-    \subsection{General Substance Model Yielding $u\!:\!u(T)$}
+    \subsection{Substance Equation of State Yielding $u\!:\!u(T)$}
 
     For $u\!:\!u(T)$ to hold, one must have:
     %
@@ -626,6 +626,33 @@ Modeling}
     state  is  represented  as  $Pv  =  ZRT$,  then  $Z  =  v/f(v)$,  as  previously  announced.
     Equation~(\ref{eq:uT.EoS}) is the most general equation of state for a  substance  that  has
     $u\!:\!u(T)$, and consequently $du = c_v\,dT$.
+
+    %---------------------------------------------------------------------------------------
+    \subsection{Specific Heats of a $u\!:\!u(T)$ Substance}
+
+    Writing $s\!:\!s(T, v)$ and differentiating, with $du =  T\,ds  -  P\,dv$  and  the  Maxwell
+    relation based on the Helmholtz energy, $\inlxyz svT = \inlxyz PTv$, one arrives at
+    %
+    \begin{equation}
+        ds = \frac{c_v}{T}\,dT + \parxyz PTv\,dv.
+        \label{eq:ds.Tv}
+    \end{equation}
+    %
+    Writing $s\!:\!s(T, P)$ and differentiating, with $dh =  T\,ds  +  v\,dP$  and  the  Maxwell
+    relation based on the Gibbs energy, $\inlxyz sPT = -\inlxyz vTP$, one arrives at
+    %
+    \begin{equation}
+        ds = \frac{c_p}{T}\,dT - \parxyz vTP\,dP.
+        \label{eq:ds.TP}
+    \end{equation}
+    %
+    Equating  the  cross  derivatives  from  the  $dT$  and  $dv$  (or  $dP$)  coefficients   on
+    Eqs.~(\ref{eq:ds.Tv}) and~(\ref{eq:ds.TP}), yields
+    %
+    \begin{equation}
+        \label{eq:}
+    \end{equation}
+    %
 
     %---------------------------------------------------------------------------------------
     \subsection{Energy Balance with a $u\!:\!u(T)$ Model}
