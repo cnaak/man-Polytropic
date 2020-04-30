@@ -672,7 +672,14 @@ Modeling}
     Therefore, $\inlxyz{c_v}vT = 0$ making $c_v\!:\!c_v(T)$ at best for a  Eq.~(\ref{eq:uT.EoS})
     substance.
 
-    Let $\mathsf{g}(v) \equiv f(v)/v$. From Eq.~(\ref{eq:uT.EoS}), one has:
+    Let
+    %
+    \begin{equation}
+        \mathsf{g}(v) \equiv f(v)/v.
+        \label{eq:def.g}
+    \end{equation}
+    %
+    \noindent then, from Eq.~(\ref{eq:uT.EoS}), one has:
     %
     \begin{align}
         v & = \frac{RT}{P\mathsf{g}(v)} & \rightharpoondown \\
@@ -711,15 +718,12 @@ Modeling}
     %
     \noindent thus making $h\!:\!h(T)$ for a substance with $Pf(v) = RT$ equation of state.
 
-    Therefore, a $u\!:\!u(T)$ substance also has
-    %
-    \begin{equation}
-        c_v\!:\!c_v(T),\mbox{ }
-        c_P\!:\!c_P(T),\mbox{ }
-        \gamma\!:\!\gamma(T),\mbox{ and }
-        h\!:\!h(T).
-        \label{eq:uT.outcomes}
-    \end{equation}
+    The findings of this subsection are thus summarized in an already proven theorem:
+
+    \begin{theorem}[$u\!:\!u(T)$ substance]\label{theo:uT.subst}
+        A substance for which $u\!:\!u(T)$, necessarily has $c_v\!:\!c_v(T)$, $c_P\!:\!c_P(T)$,
+        and $\gamma\!:\!\gamma(T)$ at best, and also $h\!:\!h(T)$.
+    \end{theorem}
 
     %---------------------------------------------------------------------------------------
     \subsection{Energy Balance with a $u\!:\!u(T)$ Model}
