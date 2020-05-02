@@ -13,6 +13,9 @@ cc
 # My figure pdf's
 fig/*pdf
 
+# The submission directory
+submission
+
 ## My own edits above this line
 
 ## Core latex/pdflatex auxiliary files:
