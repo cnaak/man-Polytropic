@@ -79,7 +79,7 @@ NaaktgeborenC$\cdot$PhD@gmail$\cdot$com}
     polytropic  processes  as  computational   discrete   elements   for   generic   engineering
     thermodynamics process modeling is made. Finally, theoretical requisites for a process to be
     an exact polytropic one, including the deduction of the most general equation  of  state  of
-    the underlying substance, are discussed beyond a reference.
+    the underlying substance, subject to $u\!:\!u(T)$, are discussed beyond a reference.
 }
 %-----------------------------------------------------------------------------------------------
 \begin{document}
@@ -508,7 +508,8 @@ NaaktgeborenC$\cdot$PhD@gmail$\cdot$com}
     The  work  of  Christians~\cite{2012-ChristiansJ-IntJMechEngEduc}  shows   that   internally
     reversible processes in closed systems with a calorically perfect gas  with  a  $Pv  =  ZRT$
     equation of state with constant compressibility factor $Z$ assuming  negligible  changes  in
-    system kinetic and potential energies and constant energy transfer ratio,
+    system kinetic and potential energies, absence of chemical reactions,  and  constant  energy
+    transfer ratio,
     %
     \begin{equation}
         K \equiv \frac{\delta q}{\delta w},
@@ -524,8 +525,8 @@ NaaktgeborenC$\cdot$PhD@gmail$\cdot$com}
     this finding is actually only applicable to ideal gases, for which $Z=1$, or  whether  other
     constants work.
 
-    The energy balance equation for a closed system reads, in the intensive  differential  form,
-    as
+    The energy balance  equation  for  a  closed  unreactive  system  reads,  in  the  intensive
+    differential form, as
     %
     \begin{equation}
         \delta q - \delta w = du + de_k + de_p,
@@ -755,14 +756,15 @@ NaaktgeborenC$\cdot$PhD@gmail$\cdot$com}
         \label{eq:hTP}
     \end{align}
     %
-    \noindent thus making $h\!:\!h(T)$ for a substance with $Pf(v) = RT$ equation of state.
+    \noindent thus making $h\!:\!h(T)$ for an unreactive substance with $Pf(v) = RT$ equation of
+    state.
 
     The findings of this subsection are thus summarized in an already proven theorem:
 
-    \begin{theorem}[$u\!:\!u(T)$ substance]\label{theo:uT.subst}
-        A substance for which $u\!:\!u(T)$, necessarily has $c_v\!:\!c_v(T)$,  $c_P\!:\!c_P(T)$,
-        and $\gamma\!:\!\gamma(T)$ at best, and also $h\!:\!h(T)$. Moreover, it has a  $Pf(v)  =
-        RT$ equation of state, with $f(v)$ being an arbitrary function of $v$.
+    \begin{theorem}[$u\!:\!u(T)$ unreactive substance]\label{theo:uT.subst}
+        An unreactive  substance  for  which  $u\!:\!u(T)$,  necessarily  has  $c_v\!:\!c_v(T)$,
+        $c_P\!:\!c_P(T)$, and $\gamma\!:\!\gamma(T)$ at best, and also  $h\!:\!h(T)$.  Moreover,
+        it has a $Pf(v) = RT$ equation of state, with $f(v)$ being an arbitrary function of $v$.
     \end{theorem}
 
     %---------------------------------------------------------------------------------------
@@ -862,9 +864,9 @@ NaaktgeborenC$\cdot$PhD@gmail$\cdot$com}
     This section's outcomes are the base for the following, `K-polytropic', theorem:
 
     \begin{theorem}[K-polytropic]\label{theo:K.poly}
-        Internally reversible processes in constant-specific-heat closed systems with negligible
-        kinetic and potential energy changes and constant heat-to-work ratio interactions,  $K$,
-        are exact polytropic processes only if the substance is an ideal gas.
+        Internally reversible processes in constant-specific-heat unreactive closed systems with
+        negligible  kinetic  and  potential  energy  changes  and  constant  heat-to-work  ratio
+        interactions, $K$, are exact polytropic processes only if the substance is an ideal gas.
     \end{theorem}
 
     Therefore, the  K-polytropic  theorem  answers  the  question  herein  raised  in  light  of
