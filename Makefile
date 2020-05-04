@@ -19,7 +19,7 @@ fig/%.pdf: fig/%.svg
 		--export-pdf=$@
 
 ${PREF}.pdf: ${PREF}.tex \
-		cc/by-nc-nd.pdf \
+		cc/by.pdf \
 		fig/idealDieselExample.pdf \
 		fig/nonExactPolytropic.pdf \
 		fig/approximations.pdf \
